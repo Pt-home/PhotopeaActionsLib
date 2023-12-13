@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="img/icon.png" type="image/png" />
+  <meta name="viewport" content="width=device-width">
+  <title>Photopea Actions Lib - Filter Gallery examples</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+   <h1><a id="alogo" href="index.html"><img id="logo" src="img/icon512.png"></a><br>Filter Gallery examples</h1>
+  
+  <div class="codeClass" id="FGAF">
+    <h3> Artistic Filters:</h3>
+   <h4>Colored Pencil, Cutout, Dry Brush, Film Grain, Fresco, Neon Glow, Paint Daubs, Palette Knife, Plastic Wrap, Poster Edges, Rough Pastels, Smudge Stick, Sponge, Underpainting, Watercolor</h4>
+    <textarea>
+//applyPPFilter("ColourPencil", [4, 8, 25]);
+//applyPPFilter("Cutout", [5, 2, 4]);
+//applyPPFilter("DryBrush", [8, 7, 2]);
+//applyPPFilter("FilmGrain", [4, 0, 10]);
+//applyPPFilter("Fresco", [2, 8, 1]);
+//applyPPFilter("NeonGlow", [-15, 15, [255.0, 128.0, 0.0] ]); //[255.0, 128.0, 0.0] - RGB color
+//applyPPFilter("PaintDaubs", [8, 7, "BrSm"]); //"BrSm", "BrsL", "BrDR", "BrsW", "BrbW", "BrSp"     
+//applyPPFilter("PaletteKnife", [25, 3, 0]);
+//applyPPFilter("PlasticWrap", [15, 9, 7]);
+//applyPPFilter("PosterEdges", [3, 2, 1]);
+//applyPPFilter("RoughPastels", [6, 4, "TxCa", 100, 20, "LDBt", false]); //"TxBl", "TxCa", "TxFr", "TxTL", "TxBr", "TxBu", "TxSt" // "LDBt", "LDBL", "LDLf", "LDTL", "LDTp", "LDTR", "LDRg", "LDBR"
+//applyPPFilter("SmudgeStick", [2, 0, 10]);
+//applyPPFilter("Sponge", [2, 12, 5]);
+//applyPPFilter("Underpainting", [6, 4, "TxCa", 100, 20, "LDBt", true]); //"TxBl", "TxCa", "TxFr", "TxTL", "TxBr", "TxBu", "TxSt" // "LDBt", "LDBL", "LDLf", "LDTL", "LDTp", "LDTR", "LDRg", "LDBR"
+//applyPPFilter("Watercolor", [9, 1, 1]);
+    </textarea>
+  </div>
+  
+  <div class="codeClass" id="FGBS">
+    <h3>Brush Strokes Filters:</h3>
+    <h4>Accented Edges, Angled Strokes, Crosshatch, Dark Strokes, Ink Outlines, Spatter, Sprayed Strokes, Sumi-e</h4>
+    <textarea>
+//applyPPFilter("AccentedEdges", [2, 30, 5]);
+//applyPPFilter("AngledStrokes", [2, 30, 5]);
+//applyPPFilter("Crosshatch", [9, 6, 1]);
+//applyPPFilter("DarkStrokes", [5, 6, 2]);
+//applyPPFilter("InkOutlines", [4, 14, 12]);
+//applyPPFilter("Spatter", [10, 5]);
+//applyPPFilter("SprayedStrokes", [10, 5, "SDRD"]); //"SDRD", "SDHz", "SDLD", "SDVt"
+//applyPPFilter("Sumi_e", [5, 4, 5]); 
+    </textarea>
+  </div>
+
+  <div class="codeClass" id="FGDS">
+    <h3>Distort & Stylize Filters:</h3>
+    <h4>Diffuse Glow, Glass, Ocean Ripple, Glowing Edges</h4>
+    <textarea>
+//applyPPFilter("DiffuseGlow", [6, 16, 15]);
+//applyPPFilter("Glass", [6, 4, "TxCa", 100, true]); //"TxBl", "TxCa", "TxFr", "TxTL", "TxBr", "TxBu", "TxSt"
+//applyPPFilter("OceanRipple", [9, 9]);
+//applyPPFilter("GlowingEdges", [1, 16, 15]);
+    </textarea>
+  </div>
+
+   <div class="codeClass" id="FGSF">
+    <h3>Sketch Filters:</h3>
+    <h4>Bas Relief, Chalk & Charcoal, Charcoal, Chrome, Conté Crayon, Graphic Pen, Halftone Pattern, Note Paper, Photocopy, Plaster, Reticulation, Stamp, Torn Edges, Water Paper</h4>
+    <textarea>
+//applyPPFilter("BasRelief", [13, 3, "LDBt"]); //"LDBt", "LDBL", "LDLf", "LDTL", "LDTp", "LDTR", "LDRg", "LDBR"
+//applyPPFilter("ChalkAndCharcoal", [6, 6, 1]);
+//applyPPFilter("Charcoal", [1, 5, 50]);
+//applyPPFilter("Chrome", [7, 4]);
+//applyPPFilter("ConteCrayon", [11, 7, "TxCa", 100, 20, "LDBt", false]); //"TxBl", "TxCa", "TxFr", "TxTL", "TxBr", "TxBu", "TxSt" // "LDBt", "LDBL", "LDLf", "LDTL", "LDTp", "LDTR", "LDRg", "LDBR"
+//applyPPFilter("GraphicPen", [15, 50, "SDRD"]); //"SDRD", "SDHz", "SDLD", "SDVt"
+//applyPPFilter("HalftonePattern", [1, 5, "ScrD"]); // "ScrC", "ScrD", "ScrL"
+//applyPPFilter("NotePaper", [22, 10, 11]);
+//applyPPFilter("Photocopy", [2, 2]);
+//applyPPFilter("Plaster", [20, 2, "LPLf"]); // "LPBt", "LPBL", "LPLf", "LPTL", "LPTp", "LPTR", "LPRg", "LPBR"
+//applyPPFilter("Reticulation", [12, 40, 5]);
+//applyPPFilter("Stamp", [7, 4]);
+//applyPPFilter("TornEdges", [25, 11, 17]);
+//applyPPFilter("WaterPaper", [15, 60, 80]);
+    </textarea>
+  </div>
+
+  <div class="codeClass" id="FGTF">
+    <h3>Texture Filters:</h3>
+    <h4>Craquelure, Grain, Mosaic Tiles, Patchwork, Stained Glass, Texturizer
+    </h4>
+    <textarea>
+//applyPPFilter("Craquelure", [15, 6, 9]);
+//applyPPFilter("Grain", [40, 50, "GrnR"]); //"GrnR", "GrSf", "GrSr", "GrnC", "GrCn", "GrnE", "GrSt", "GrnH", "GrnV", "GrSp"
+//applyPPFilter("MosaicTiles", [55, 8, 5]);
+//applyPPFilter("Patchwork", [9, 9]);
+//applyPPFilter("StainedGlass", [24, 4, 3]);
+//applyPPFilter("Texturizer", ["TxCa", 100, 20, "LDBt", true]); //"TxBl", "TxCa", "TxFr", "TxTL", "TxBr", "TxBu", "TxSt" // "LDBt", "LDBL", "LDLf", "LDTL", "LDTp", "LDTR", "LDRg", "LDBR"
+    </textarea>
+  </div>
+  
+ <h3 class="home_page"><a href="index.html">Home page</a></h3> 
+
+ <h4 class="footer">(c) Pustovoit Oleg, 2023</h4>
+  
+</body>
+
+</html>

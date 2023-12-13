@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="img/icon.png" type="image/png" />
+  <meta name="viewport" content="width=device-width">
+  <title>Photopea Actions Lib - Actions examples</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+   <h1><a id="alogo" href="index.html"><img id="logo" src="img/icon512.png"></a><br>Actions examples</h1>
+
+<div class="codeClass" id="ME">
+    <h3>Edit menu functions</h3>
+    <textarea>
+//applyPPAction("Fade");
+//applyPPAction("Fade", [30.0, "Scrn"]); //"Nrml", "Dslv", "Drkn", "Mltp", "CBrn", "linearBurn", "darkerColor", "Lghn", "Scrn", "CDdg", "linearDodge", "lighterColor", "Ovrl", "SftL", "HrdL", "vividLight", "linearLight", "pinLight", "hardMix", "Dfrn", "Xclu", "blendSubtraction", "blendDivide", "H", "Strt", "Clr", "Lmns" - blend mode 
+
+//-----------------------------------------------------------------------------------------------------------------
+
+//applyPPAction("AutoAlign");
+
+//-----------------------------------------------------------------------------------------------------------------
+
+//applyPPAction("DefinePattern");
+    </textarea>
+</div>
+  
+<div class="codeClass" id="MIAd">
+    <h3>Image -> Adjustments submenu functions</h3>
+    <textarea>
+//applyPPAction("BrightnessContrast", [100, -100, false]);
+//applyPPAction("BrightnessContrast");
+
+//applyPPAction("Levels", [ [30, 0.75, 200], [40, 240] ]);
+
+//applyPPAction("Curves", [ [0,0], [85, 60], [150, 165], [255, 255] ]);
+//applyPPAction("Curves");
+      
+//applyPPAction("Exposure");
+//applyPPAction("Exposure", ["presetKindCustom", -0.1, 0.05, -0.5]); //"presetKindCustom" NO CHANGE! 
+
+//-----------------------------------------------------------------------------------------------------------------
+      
+//applyPPAction("Vibrance", [50, -25]);
+//applyPPAction("Vibrance");
+      
+//applyPPAction("HueSaturation");
+//applyPPAction("HueSaturation", ["presetKindCustom", true, [-10,0,10]]); //"presetKindCustom" NO CHANGE! true/false - colorize
+      
+//applyPPAction("ColorBalance");
+//applyPPAction("ColorBalance", [[10,0,-10], [10,0,-10], [-10,0,10], false]);
+      
+//applyPPAction("BlackAndWhite"); // Sepia as default
+//applyPPAction("BlackAndWhite", ["presetKindCustom", 40, 30, 70, 60, 20, 5, true,  [255.0, 128.0, 0.0] ]); //"presetKindCustom" NO CHANGE! Colors order: R Y G C Bl M; tint on/off - true/false; tint color - list, in RGB format; last color list needfull!  
+//applyPPAction("BlackAndWhite", ["presetKindCustom", 40, 85, 204, 60, 20, 80, false, [0.0, 0.0, 0.0] ]); //"presetKindCustom" NO CHANGE! Colors order: R Y G C Bl M; tint on/off - true/false; tint color - list, in RGB format; last color list needfull!
+      
+//applyPPAction("PhotoFilter");
+//applyPPAction("PhotoFilter", [[127.0, 0.0, 127.0], 50, true]); //Color - list, in RGB format
+
+//applyPPAction("ChannelMixer", ["Gray", [0.0, 100.0, 0.0, 40.0] ]);
+//applyPPAction("ChannelMixer", ["RGB",  [60.0, 180.0, -110.0, 40.0], [-100.0, 5.0, 105.0, -35.0], [-40.0, 50.0, -20.0, 50.0] ]);
+
+//-----------------------------------------------------------------------------------------------------------------
+
+//applyPPAction("Invert");
+
+//applyPPAction("Posterize");
+//applyPPAction("Posterize", [6]);
+
+//applyPPAction("Threshold");
+//applyPPAction("Threshold", [50]);
+
+//-----------------------------------------------------------------------------------------------------------------
+
+//applyPPAction("ShadowsHighlights", [ [15.0, 70.0, 55], [15.0, 75.0, 15], 0.1, 0.1, -80, -5]);   
+
+//-----------------------------------------------------------------------------------------------------------------
+
+//applyPPAction("Desaturate");
+      
+//applyPPAction("MatchColor");
+//applyPPAction("MatchColor", [50,  50,  25, true, true, true]);
+
+//applyPPAction("ReplaceColor", [ 70, [80.0, -3.0, 76.0], [80.0, -3.0, 76.0], -50, 10, 5]); // [L, a, b] - min and max as Lab color!
+//applyPPAction("ReplaceColor", [ 70, [25.0, -3.0, 23.0], [80.0, 7.0, 75.0], 30, -40, 25]); // [L, a, b] - min and max as Lab color!
+    </textarea>
+  </div>
+  
+  <div class="codeClass" id="MI">
+    <h3>Image menu functions</h3>
+    <textarea>
+//applyPPAction("AutoTone");
+//applyPPAction("AutoContrast");
+//applyPPAction("AutoColor");
+
+//-----------------------------------------------------------------------------------------------------------------
+
+//applyPPAction("CanvasSizePx", [500.0, 500.0,  "Cntr", "Cntr", false]);
+//applyPPAction("CanvasSizePx", [1000.0, 600.0, "Rght", "Btom", false]);
+//applyPPAction("CanvasSize%",  [400.0, 400.0,  "Cntr", "Cntr", false]);
+//applyPPAction("CanvasSize%",  [150.0, 150.0,  "Left", "Top ", true]);
+
+//applyPPAction("ImageSizePx", [300.0, 300.0, 96.0, "Bcbc"]);
+//applyPPAction("ImageSizePx", [400.0, 500.0, 96.0, "Blnr"]);
+//applyPPAction("ImageSizePx", [600.0, 480.0, 72.0, "Nrst"]);
+//applyPPAction("ImageSize%",  [75.0,  75.0,  96.0, "Bcbc"]);
+//applyPPAction("ImageSize%",  [90.0,  100.0, 96.0, "Blnr"]);
+//applyPPAction("ImageSize%",  [60.0,  80.0,  72.0, "Nrst"]);
+
+//applyPPAction("Crop");
+      
+//applyPPAction("Trim");
+//applyPPAction("Trim", ["Trns", true, true, true, true]); //"Trns", "topLeftPixelColor", "bottomRightPixelColor"
+      
+//applyPPAction("RevealAll");
+
+//-----------------------------------------------------------------------------------------------------------------
+
+//applyPPAction("Duplicate");
+
+//applyPPAction("ApplyImage", ["RGB ", true, "Mltp", 50.0, true]);
+//1-st parameter - channel: "RGB ", "Rd  ",  "Grn ", "Bl  ", "Trsp" , 2-nd parameter - invert: true/false
+//3-rd parameter - blend mode: "Nrml", "Dslv", "Drkn", "Mltp", "CBrn", "linearBurn", "darkerColor", "Lghn", "Scrn", "CDdg", "linearDodge", "lighterColor", "Ovrl", "SftL", "HrdL", "vividLight", "linearLight", "pinLight", "hardMix", "Dfrn", "Xclu", "blendSubtraction", "blendDivide", "H", "Strt", "Clr", "Lmns"
+//4-th parameter - opacity in percents, 5-th parameter - preserve transparency: true/false
+    </textarea>
+  </div>
+
+  <div class="codeClass" id="ML">
+    <h3>Layer menu functions</h3>
+    <textarea>
+//applyPPAction("Rasterize");
+//applyPPAction("RasterizeLayerStyle");
+
+//-----------------------------------------------------------------------------------------------------------------
+      
+//applyPPAction("GroupLayers");
+
+//-----------------------------------------------------------------------------------------------------------------
+
+//applyPPAction("FlattenImage");
+    </textarea>
+  </div>
+<h3 class="home_page"><a href="index.html">Home page</a></h3> 
+
+ <h4 class="footer">(c) Pustovoit Oleg, 2023</h4>
+  
+</body>
+
+</html>

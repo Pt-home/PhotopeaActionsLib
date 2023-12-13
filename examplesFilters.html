@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="img/icon.png" type="image/png" />
+  <meta name="viewport" content="width=device-width">
+  <title>Photopea Actions Lib - Filters examples</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+   <h1><a id="alogo" href="index.html"><img id="logo" src="img/icon512.png"></a><br>Filters examples</h1>
+
+   <div class="codeClass" id="FM">
+    <h3>Filter menu</h3>
+    <textarea>
+//applyPPFilter("LensCorrection", [15, 85]); 
+//applyPPFilter("CameraRaw", [10, 20, -0.5, 10, -25, 10]);
+    </textarea>
+  </div>
+
+  <div class="codeClass" id="F3D">
+    <h3>3D (1/2)</h3>
+    <h4>Normal Map, <s>Texture Dilation</s> </h4>
+    <textarea>
+//applyPPFilter("NormalMap", [0.1, 1.0, -1.0, [0.75, 0.75, 0.75]]); //2-d parametr: percents, 0.0...2.0, 3-d parametr: 1.0 (Inverse) or -1.0 (no Inverse, last list: percents, 0.0...1.0
+    </textarea>
+  </div>
+  
+  <div class="codeClass" id="FB">
+    <h3>Blur (9/9)</h3>
+    <h4>Average, Blur, Blur More, Box Blur, Gaussian Blur, Lens Blur, Motion Blur, Radial Blur, Surface Blur</h4>
+    <textarea>
+//applyPPFilter("Average");
+//applyPPFilter("Blur");
+//applyPPFilter("BlurMore");
+//applyPPFilter("BoxBlur", [10.0]);
+//applyPPFilter("GaussianBlur", [20.0]);
+
+//applyPPFilter("LensBlur", ["BeIn", "BeCm", 0, false, "BeS3", 10.0, 20, 30, 40.0, 50, 60, "BeNu", true]);
+//applyPPFilter("LensBlur", ["BeIt", "BeCm", 10, true, "BeS6", 20.0, 30, 40, 50.0, 60, 70, "BeNg", false]);
+//applyPPFilter("LensBlur", ["BeIt", "BeCt", 10, false, "BeS8", 20.0, 30, 40, 50.0, 60, 70, "BeNg", false]);
+//1-st parameter - "BeIn" (without depth mask, next two parameters - "BeCm", 0) or "BeIt";
+//2-nd parameter - "BeCt" (transparency) or "BeCm" (raster mask); 
+//3-nd parameter - focal distance as integer;  
+//4-th parameter - invert, true\false;     
+//5-th parameter - "BeS3", "BeS4", "BeS5", "BeS6", "BeS7" or "BeS8";
+//6-th parameter - radius as float;
+//7-th parameter - blade curvature as integer; 
+//8-th parameter - rotation as integer; 
+//9-th parameter - brightness as float;
+//10-th parameter - treshold as integer; 
+//12-th parameter - "BeNu" (uniform) or "BeNg" (gaussian); 
+//13-th parameter - monochrome, true\false;
+      
+//applyPPFilter("MotionBlur", [-45, 20.0]);
+//applyPPFilter("RadialBlur", [50, "Zm", [0.5, 0.5] ]); //"Spn", "Zm"//[0.5, 0.5] - point of center, x and y as 0.0...1.0 
+//applyPPFilter("SurfaceBlur", [75.0, 150]);
+    </textarea>
+  </div>
+
+  <div class="codeClass" id="FD">
+    <h3>Distort (9/10)</h3>
+    <h4><s>Displace</s>, Kaleidoscope, Pinch, Polar Coordinates, Ripple, Shear, Spherize, Twirl, Wave, ZigZag</h4>
+    <textarea>
+//applyPPFilter("Kaleidoscope", [3, 30]);
+//applyPPFilter("Pinch", [20]);
+//applyPPFilter("PolarCoordinates", ["RctP"]);//"RctP", "PlrR"
+//applyPPFilter("Ripple", [100, "Mdm"]);//"Sml", "Mdm", "Lrg"
+//applyPPFilter("Shear", [  [ [0,0], [10, 45], [-20, 90], [0, 128] ], "WrpA"  ]); // [ [x1,y1], [x2, y2], [x3, y3], ... ] - list of points //"WrpA", "RptE"
+//applyPPFilter("Spherize", [50, "Nrml"]); //"Nrml", "HrzO", "VrtO"
+//applyPPFilter("Twirl", [-20]);
+//applyPPFilter("Wave", ["WvSn", 3, 90, 180, 3, 80, 80, 70, "WrpA"]); //"WvSn", "WvTr", "WvSq"//"WrpA", "RptE"
+//applyPPFilter("ZigZag", [-20, 50, "ArnC"]);//"ArnC", "OtFr", "PndR"
+    </textarea>
+  </div>
+
+  <div class="codeClass" id="FN">
+    <h3>Noise (5/5)</h3>
+    <h4>Add Noise, Despeckle, Dust & Scratches, Median, Reduce Noise</h4>
+    <textarea>
+//applyPPFilter("AddNoise", ["Unfr", 50, true]);//"Gsn", "Unfr"
+//applyPPFilter("Despeckle");
+//applyPPFilter("DustAndScratches", [10, 20]);
+//applyPPFilter("Median", [10.0]);
+//applyPPFilter("ReduceNoise", [5.0,  10.0, true, 50, 15]); //As in PhotoShop: Reduce color noise and Sharpen details - percents, remove JPEG Artifact - true/false, Strength and Preserve details - integer (two last parametrs you see in Photopea)
+    </textarea>
+  </div>
+
+  <div class="codeClass" id="FP">
+    <h3>Pixelate (6/6)</h3>
+    <h4>Color Halftone, Crystallize, Fragment, Mezzotint, Mosaic, Pointillize</h4>
+    <textarea>
+//applyPPFilter("ColorHalftone", [2, 10, 15, 105, 45]);
+//applyPPFilter("Crystallize", [10]);
+//applyPPFilter("Fragment");  
+//applyPPFilter("Mezzotint", ["FnDt"]); //"FnDt", "MdmD", "GrnD", "CrsD", "ShrL", "MdmL", "LngL", "ShSt", "MdmS", "LngS"
+//applyPPFilter("Mosaic", [10.0]);
+//applyPPFilter("Pointillize", [20]);  
+    </textarea>
+  </div>
+
+ <div class="codeClass" id="FR">
+    <h3>Render (4/5)</h3>
+    <h4><s>Flame</s>, Clouds, Difference Clouds, Fiber, Lens Flare</h4>
+    <textarea>
+//applyPPFilter("Clouds");
+//applyPPFilter("DifferenceClouds");
+//applyPPFilter("Fibers", [10, 20]);
+//applyPPFilter("LensFlare", [10, [0.5, 0.5],  "Nkn1"]); //[0.5, 0.5] - point of center, x and y as 0.0...1.0//"Zm", "Nkn", "Nkn1", "PnVs"
+    </textarea>
+  </div>
+
+  <div class="codeClass" id="FSH">
+    <h3>Sharpen (5/5)</h3>
+    <h4>Sharpen, Sharpen Edges, Sharpen More, Smart Sharpen, Unsharp Mask</h4>
+    <textarea>
+//applyPPFilter("Sharpen");
+//applyPPFilter("SharpenEdges");
+//applyPPFilter("SharpenMore");
+//applyPPFilter("SmartSharpen", [210.0,  21.0]);      
+//applyPPFilter("UnsharpMask",  [100.0, 4.0, 20]);     
+    </textarea>
+  </div>
+
+
+  <div class="codeClass" id="FST">
+    <h3>Stylize (7/7)</h3>
+    <h4>Diffuse, Emboss, Find Edges, Oil Paint, Solarize, Trace Contour, Wind</h4>
+    <textarea>
+//applyPPFilter("Diffuse", ["anisotropic"]); //"Nrml", "DrkO", "LghO", "anisotropic"
+//applyPPFilter("Emboss", [2, 10, 15]);
+//applyPPFilter("FindEdges");
+//applyPPFilter("OilPaint", [1.0, 2.0, 3.0, 4.0, true, 5.0, 45]);
+//applyPPFilter("Solarize"); 
+//applyPPFilter("TraceContour", [100, "Lwr"]); //"Lwr", "Upr"
+//applyPPFilter("Wind", ["Wnd", "Left"]); //"Wnd", "Blst", "Stgr" //"Left", "Rght"
+    </textarea>
+  </div>
+  
+<div class="codeClass" id="FO">
+    <h3>Other (9/9)</h3>
+    <h4>High Pass, HSB/HSL, Maximum, Minimum, Offset, Repeat, Color To Alpha, Dither, Particles</h4>
+    <textarea>
+//applyPPFilter("HighPass", [10.0]);
+//applyPPFilter("HSB/HSL", ["RGBC", "HSLC"]); //"RGBC", "HSBl", "HSLC" - color schemes
+//applyPPFilter("Maximum", [10.0, "Rndn"]); //"squareness", "Rndn"
+//applyPPFilter("Minimum", [10.0, "squareness"]); //"squareness", "Rndn"
+//applyPPFilter("Repeat", [50.0,  -50.0, 20.0, 0.0, true, 60]);
+//applyPPFilter("Offset", [500, -600, "Rpt"]);//"Rpt", "Bckg", "Wrp"
+//applyPPFilter("ColorToAlpha", [50.0, 60.0, [0.0, 0.0, 0.0] ]); //[255.0, 128.0, 0.0] - RGB color
+//applyPPFilter("Dither", [1,  1]); //Palette: 0-3, method: 0-2
+//applyPPFilter("Particles", [10, 8, 100, 800, [255.0, 128.0, 0.0], 0.2, 15, true, true]); //[255.0, 128.0, 0.0] - RGB color
+    </textarea>
+  </div> 
+  
+  <div class="codeClass" id="FFT">
+    <h3>Fourier (2/2)</h3>
+    <h4>Fourier Transform, Inverse Fourier Transform</h4>
+    <textarea>
+//applyPPFilter("FourierTransform");
+//applyPPFilter("InverseFourierTransform");
+    </textarea>
+  </div>  
+
+ <h3 class="home_page"><a href="index.html">Home page</a></h3> 
+
+ <h4 class="footer">(c) Pustovoit Oleg, 2023</h4>
+  
+</body>
+
+</html>

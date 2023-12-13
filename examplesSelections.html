@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="img/icon.png" type="image/png" />
+  <meta name="viewport" content="width=device-width">
+  <title>Photopea Actions Lib - Selections examples</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+   <h1><a id="alogo" href="index.html"><img id="logo" src="img/icon512.png"></a><br>Selections examples</h1>
+  
+  <div class="codeClass" id="SF">
+    <textarea>
+//select("Inverse"); 
+//select("Deselect");
+//select("All");
+//select("Delete");
+//select("AllLayers");
+
+//select("ColorRange", ["SampledColors", 100, [100.0, 0.0, 0.0], [100.0, 0.0, 0.0], true]); //Fuzzines - integer; minColor and maxColor - in LAB format!; true\false - invert
+//select("ColorRange", ["Shdw", 10, 50, true]); //Fuzzines - integer; max - integer; true\false - invert
+//select("ColorRange", ["Mdtn", 50, 50, 100, true]); //Fuzzines - integer; min and max  - integers; true\false - invert
+//select("ColorRange", ["Hghl", 10, 50, true]); //Fuzzines - integer; min - integer; true\false - invert
+
+//select("Expand",     [1.0, true]);
+//select("Contract",   [1.0, false]);
+//select("Smoothness", [1.0, true]);
+//select("Feather",    [1.0, false]);
+//select("Border",     [1.0, true]);
+//select("Similar",    [1.0, false]);
+//select("Grow",       [1.0, true]);
+
+//saveSelection("Alpha");
+//loadSelection("Alpha");
+
+//selectTool("Rectangle", [ [10, 50], [40, 150], 3.0]);       //[x1, y1] - left-top point, [x2, y2] - right-bottom point, feather - float
+//selectTool("Ellipse",   [ [10, 50], [40, 150], 5.0, true]); //[x1, y1] - left-top point, [x2, y2] - right-bottom point, feather - float, anti-alias - true/false
+
+//selectMagicWand([ [3, 5], 20, true, false]); //[x, y] - point on canvas, tolerancy - integer, anti-alias - true/false, contiguous - true/false
+
+//selectToPath();
+//selectToPath(5.0); //parameter - tolerancy
+
+//pathToSelect();
+    </textarea>
+  </div>
+  
+<h3 class="home_page"><a href="index.html">Home page</a></h3> 
+
+ <h4 class="footer">(c) Pustovoit Oleg, 2023</h4>
+  
+</body>
+
+</html>

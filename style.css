@@ -1,0 +1,354 @@
+html {
+  height: 100%;
+  width: 90%;
+  font-family: "Verdana";
+  padding:0px;
+  margin:0px auto;
+}
+
+textarea {
+  width: 100%;
+} 
+
+.codeClass#canvas canvas {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid 1px;
+ }
+
+.page {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid 1px;
+  width: 60%;
+ }
+ input { 
+      padding: 3px; 
+      box-sizing: border-box; 
+      margin: 2px 2px;
+      width: 4em;
+  }
+.form-group{
+  text-align:center;
+}
+.codeClass#jsSample h3, .codeClass#canvas h3 {
+  text-align: center;
+ }
+
+.codeClass#jsSample textarea {
+  width: 80%;
+  height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+.codeClass button {
+  font-size: 1.2em;
+ }
+
+#OE {
+  width: 100%;
+  height: 600px;
+}
+
+.codeClass#CLF textarea {
+  height: 335px;
+ }
+
+.codeClass#CFF textarea {
+  height: 290px;
+ }
+
+.codeClass#CSF textarea {
+  height: 335px;
+ }
+
+.codeClass#CDF textarea {
+  height: 305px;
+ }
+
+.codeClass#CAF textarea {
+  height: 70px;
+ }
+
+.codeClass#FGAF textarea {
+  height: 275px;
+ }
+
+.codeClass#FGBS textarea {
+  height: 140px;
+ }
+
+.codeClass#FGDS textarea {
+  height: 80px;
+ }
+
+.codeClass#FGSF textarea {
+  height: 245px;
+ }
+
+.codeClass#FGTF textarea {
+  height: 130px;
+ }
+
+.codeClass#FM textarea {
+  height: 50px;
+ }
+
+.codeClass#F3D textarea {
+  height: 30px;
+ }
+
+.codeClass#FB textarea {
+  height: 400px;
+ }
+
+.codeClass#FD textarea {
+  height: 160px;
+ }
+
+.codeClass#FN textarea {
+  height: 110px;
+ }
+
+.codeClass#FP textarea {
+  height: 110px;
+ }
+
+.codeClass#FR textarea {
+  height: 80px;
+ }
+
+.codeClass#FSH textarea {
+  height: 95px;
+ }
+
+.codeClass#FST textarea {
+  height: 125px;
+ }
+
+.codeClass#FO textarea {
+  height: 155px;
+ }
+
+.codeClass#FFT textarea {
+  height: 50px;
+ }
+
+.codeClass#ME textarea {
+  height: 190px;
+ }
+
+.codeClass#MIAd textarea {
+  height: 890px;
+ }
+
+.codeClass#MI textarea {
+  height: 540px;
+ }
+
+.codeClass#ML textarea {
+  height: 170px;
+ }
+
+.codeClass#ITF textarea {
+  height: 110px;
+ }
+
+.codeClass#FTF textarea {
+  height: 280px;
+ }
+
+.codeClass#LAF textarea {
+  height: 110px;
+ }
+
+.codeClass#SAF textarea {
+  height: 70px;
+ }
+
+.codeClass#LIF textarea {
+  height: 170px;
+ }
+
+.codeClass#SF textarea {
+  height: 490px;
+ }
+
+.codeClass#L1 textarea {
+  height: 350px;
+ }
+
+.codeClass#L2 textarea {
+  height: 410px;
+ }
+
+.codeClass#L3 textarea {
+  height: 430px;
+ }
+
+.codeClass#L4 textarea {
+  height: 540px;
+ }
+
+.codeClass#LSCP textarea {
+  height: 660px;
+ }
+
+.codeClass#LSBE textarea {
+  height: 1450px;
+ }
+
+.codeClass#LSS textarea {
+  height: 365px;
+ }
+
+.codeClass#LSIS textarea {
+  height: 230px;
+ }
+
+.codeClass#LSIG textarea {
+  height: 245px;
+ }
+
+.codeClass#LSSt textarea {
+  height: 200px;
+ }
+
+.codeClass#LSCO textarea {
+  height: 110px;
+ }
+
+.codeClass#LSPO textarea {
+  height: 175px;
+ }
+
+.codeClass#LSOG textarea {
+  height: 235px;
+ }
+
+.codeClass#LSDS textarea {
+  height: 260px;
+ }
+
+.codeClass#LS3D textarea {
+  height: 215px;
+ }
+
+.codeClass#FSCC textarea {
+  height: 50px;
+ }
+
+.codeClass#FSCF textarea {
+  height: 280px;
+ }
+
+.codeClass#FSCP textarea {
+  height: 170px;
+ }
+
+.codeClass#FSCS textarea {
+  height: 65px;
+ }
+
+.codeClass#MSKR textarea {
+  height: 130px;
+ }
+
+.codeClass#MSKV textarea {
+  height: 70px;
+ }
+
+.codeClass#PE textarea {
+  height: 190px;
+ }
+
+.codeClass#TN textarea {
+  height: 360px;
+ }
+
+.codeClass#EE textarea {
+  height: 140px;
+ }
+
+.home_page {
+  background-color: #00a18d;
+  display: block;
+  width: 20%;
+  margin: 16px auto;
+  padding: 16px;
+  text-align:center;
+}
+
+.buttons {
+  width: 98%;
+  text-align:center;
+  line-height: 2.5;
+  }
+
+.button {
+  background-color: #00a18d;
+  padding: 16px;
+  margin: 0px 2px;
+  width: 16%;
+}
+
+span.buttonMain {
+  background-color: #ffaa00;
+  padding: 16px;
+  width: 16%;
+}
+h3.buttonMain {
+   width: 98%;
+   margin: 16px auto;
+   padding: 16px;
+   text-align:center;
+}
+
+.home_page a, .button a, .buttonMain a {
+  color: white;
+}
+
+h1 {
+  background-color: #00a18d;
+  display: block;
+  width: 98%;
+  margin: 16px auto;
+  padding: 16px;
+  text-align:center;
+  color:white;
+}
+
+#logo {
+  width:30%;
+}
+
+h4.footer {
+  background-color: #00a18d;
+  width: 98%;
+  margin: 16px auto;
+  padding: 16px;
+  text-align:center;
+  color:white;
+}
+
+.video, h2.text {
+ text-align:center;
+ line-height:2;
+}
+
+div.text {
+ width: 80%;
+ margin: 16px auto;
+font-size: 18px;
+}
+
+div.text code{
+ font-size: 18px;
+ color: #ffaa00;
+ font-weight:bold;
+}
+

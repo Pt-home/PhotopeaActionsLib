@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="img/icon.png" type="image/png" />
+  <meta name="viewport" content="width=device-width">
+  <title>Photopea Actions Lib - Transforms examples</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+   <h1><a id="alogo" href="index.html"><img id="logo" src="img/icon512.png"></a><br>Transforms examples</h1>
+  
+  <div class="codeClass" id="ITF">
+    <h3>Image transforms functions</h3>
+    <textarea>
+//imageTransform("FlipH");
+//imageTransform("FlipV");
+//imageTransform("Rotate", 90);
+//imageTransform("Rotate", -90);
+//imageTransform("Rotate", 180);
+//imageTransform("Rotate", 45);
+    </textarea>
+  </div>
+  
+  <div class="codeClass" id="FTF">
+    <h3>Free transforms functions</h3>
+    <textarea>
+//freeTransform("Layer", ["Average", 50.0, 60.0, 0.0, 0.0, 0.0]);           //widtn and height
+//freeTransform("Layer", ["LeftTop", 100.0, 100.0, 40.0, 0.0, 0.0]);        //rotation
+//freeTransform("Layer", ["RightSide", 100.0, 100.0, 0.0, 20.0, 30.0]);     //skew
+//"LeftTop", "RightTop", "RightBottom", "LeftBottom", "TopSide", "RightSide", "BottomSide", "LeftSide", "Average" - point transformation center, 
+//2-st and 3-rd parameters - widtn and height in percents, 4-th parameter - angle rotation, last two parameters - skew angles (horizontal and vertical)
+
+//freeTransform("Select", ["Average", 50.0, 60.0, 0.0, 0.0, 0.0]);          //widtn and height
+//freeTransform("Select", ["LeftTop", 100.0, 100.0, 40.0, 0.0, 0.0]);       //rotation
+//freeTransform("Select", ["RightSide", 100.0, 100.0, 0.0, 20.0, 30.0]);    //skew
+//"LeftTop", "RightTop", "RightBottom", "LeftBottom", "TopSide", "RightSide", "BottomSide", "LeftSide", "Average" - point transformation center, 
+//2-st and 3-rd parameters - widtn and height in percents, 4-th parameter - angle rotation, last two parameters - skew angles (horizontal and vertical)
+
+//freeTransform("WorkPath", ["Average", 50.0, 60.0, 0.0, 0.0, 0.0]);        //widtn and height
+//freeTransform("WorkPath", ["LeftTop", 100.0, 100.0, 40.0, 0.0, 0.0]);     //rotation
+//freeTransform("WorkPath", ["RightSide", 100.0, 100.0, 0.0, 20.0, 30.0]);  //skew
+//"LeftTop", "RightTop", "RightBottom", "LeftBottom", "TopSide", "RightSide", "BottomSide", "LeftSide", "Average" - point transformation center, 
+//2-st and 3-rd parameters - widtn and height in percents, 4-th parameter - angle rotation, last two parameters - skew angles (horizontal and vertical)
+    </textarea>
+  </div>
+
+  <div class="codeClass" id="LAF">
+    <h3>Layers align functions</h3>
+    <textarea>
+//align("AdCH", false); //"AdLf", "AdCH", "AdRg", "AdTp", "AdCV", "AdBt" - align kind, true/false - align to canvas
+//align("AdCV", false); //"AdLf", "AdCH", "AdRg", "AdTp", "AdCV", "AdBt" - align kind, true/false - align to canvas
+//align("AdBt", true);  //"AdLf", "AdCH", "AdRg", "AdTp", "AdCV", "AdBt" - align kind, true/false - align to canvas
+//align("AdRg", true);  //"AdLf", "AdCH", "AdRg", "AdTp", "AdCV", "AdBt" - align kind, true/false - align to canvas
+
+//align("ADSContent") - Auto-Align;      
+    </textarea>
+  </div>
+  
+
+<h3 class="home_page"><a href="index.html">Home page</a></h3> 
+
+ <h4 class="footer">(c) Pustovoit Oleg, 2023</h4>
+</body>
+
+</html>

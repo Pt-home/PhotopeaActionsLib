@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="img/icon.png" type="image/png" />
+  <meta name="viewport" content="width=device-width">
+  <title>Photopea Actions Lib - Loops examples</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+   <h1><a id="alogo" href="index.html"><img id="logo" src="img/icon512.png"></a><br>Loops examples</h1>
+  
+  <div class="codeClass" id="L1">
+    <h3>Working with all layers Animated GIF with Photopea</h3>
+    <textarea>
+#include "photopeaActionsLib.jsx"
+
+//Can change document name
+app.activeDocument.name = "New " + app.activeDocument.name;
+      
+var parentSet = app.activeDocument.layerSets[0];
+//Can change layer set name
+parentSet.name = "GIF";                      
+
+//List all art layers in set
+var list_layers = parentSet.artLayers;       
+var size = list_layers.length;               
+
+for (var i=0; i < size; i++){
+
+  //Change active art layer
+  app.activeDocument.activeLayer = list_layers[i];                  
+
+  // Actions from photopeaActionsLib.jsx
+  applyPPFilter("Cutout", [5, 2, 4]);
+  applyPPFilter("GlowingEdges", [1, 16, 15]);  
+}
+    </textarea>
+<p class="text"> <a href="img/fly.gif">Image example for use this script</a>
+  </div>
+  
+  <div class="codeClass" id="L2">
+    <h3>Working with all layers (without layer sets) with Photopea</h3>
+    <textarea>
+#include "photopeaActionsLib.jsx"
+
+//Can change document name
+app.activeDocument.name = "New " + app.activeDocument.name;
+
+//Create layer duplicates
+var countNewLayers = 11;
+for (var i=0; i < countNewLayers; i++){
+  app.activeDocument.activeLayer.duplicate();
+}
+                        
+//List all art layers in document
+var list_layers = app.activeDocument.artLayers;       
+var size = list_layers.length;               
+
+for (var i=0; i < size; i++){
+
+  //Change active art layer
+  app.activeDocument.activeLayer = list_layers[i];
+
+  app.activeDocument.activeLayer.rotate(30*i);                  
+  
+  // Actions from photopeaActionsLib.jsx
+  applyPPFilter("OilPaint", [1.0, 2.0, 3.0, 4.0, true, 5.0, 45]);
+      
+}
+    </textarea>
+  <p class="text"> <a href="img/wings.png">Image example for use this script</a>
+  </div>
+
+  <div class="codeClass" id="L3">
+    <h3>Apply Action Set for all layers from Animated GIF with Photopea</h3>
+    <textarea>
+#include "photopeaActionsLib.jsx" //In this example no used
+
+//Layer Set "Background"     
+var parentSet = app.activeDocument.layerSets[0];
+
+//List GIF Layers
+var list_layers = parentSet.artLayers;       
+var size = list_layers.length;               
+
+for (var i=0; i < size; i++){
+
+  //Change active art layer
+  app.activeDocument.activeLayer = list_layers[i];
+
+  //For this action art layer must be visible!                
+  app.activeDocument.activeLayer.visible=true;
+
+  //Apply action
+  doAction("Engraving 1", "Engraving");
+
+  //Close eye this layer
+  app.activeDocument.activeLayer.visible=false;
+    
+}
+//Open eye first layer
+app.activeDocument.activeLayer = list_layers[0];                  
+app.activeDocument.activeLayer.visible=true;
+    </textarea>
+<p class="text"> <a href="img/F-18.gif">Image example for use this script</a> and <a href="atn/Engraving.atn">Actons Set for use this script</a>
+  </div>
+
+   <div class="codeClass" id="L4">
+    <h3>Сlear all frames backgrounds in Animated GIF with Photopea</h3>
+    <textarea>
+#include "photopeaActionsLib.jsx" 
+
+//Layer Set "Background"     
+var parentSet = app.activeDocument.layerSets[0];
+
+//List GIF Layers
+var list_layers = parentSet.artLayers;       
+var size = list_layers.length;               
+
+for (var i=0; i < size; i++){
+
+  //Change active art layer
+  app.activeDocument.activeLayer = list_layers[i];
+
+  //Open eye active layer                
+  app.activeDocument.activeLayer.visible=true;
+
+  //Selected
+  select("ColorRange", ["SampledColors", 40, [81, -8, -14], [81, -8, -14], true]);
+  
+  //Delete background
+  deleteSelection();
+
+  //Deselect
+  select("Deselect");
+
+  //Close eye this layer
+  app.activeDocument.activeLayer.visible=false;
+    
+}
+
+//Open eye last layer
+app.activeDocument.activeLayer = list_layers[size-1];                  
+app.activeDocument.activeLayer.visible=true;
+    </textarea>
+<p class="text"> <a href="img/bird-wings-flying.gif">Image example for use this script</a>
+  </div>
+
+<h3 class="home_page"><a href="index.html">Home page</a></h3> 
+
+ <h4 class="footer">(c) Pustovoit Oleg, 2023</h4>
+</body>
+
+</html>

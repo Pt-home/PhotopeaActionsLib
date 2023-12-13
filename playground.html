@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="img/iconPG.png" type="image/png" />
+  <meta name="viewport" content="width=device-width">
+  <title>Photopea Actions Lib - Playground</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <script src="playground/pg_start.jsx"></script>	
+</head>
+
+<body>
+   <h1><a id="alogo" href="index.html"><img id="logo" src="img/icon512.png"></a><br>Playground</h1>
+  
+  <div class="codeClass" id="PG">
+   <iframe src="https://www.photopea.com" title="PG" id="OE" onload="iframeLoaded(this);"></iframe>
+  </div>
+
+   <div class="codeClass" id="jsSample">
+   <h3>Run a script</h3>
+   <textarea id="script">
+     
+   </textarea>
+  <h3><button onclick="runScript()">Run</button></h3>
+  </div>
+
+  <script src="playground/pg_lib_append.jsx"></script>
+
+  <div class="codeClass" id="canvas">
+    <h3>Get and set image buffer</h3>
+   <canvas id="c" width="256" height="256"></canvas>
+   <h3><button onclick="getBuffer()">Get Buffer from Photopea</button><br><br>
+        <button onclick="sendBuffer(false)">Send Buffer as New File into Photopea</button>
+        <button onclick="sendBuffer(true)">Send Buffer as Smart Layer into Photopea</button></h3>
+
+  <div id="page" class="page">
+    <h3>Custom Filter</h3>
+    
+    <form id="customFilter">
+      
+      <div class="form-group">
+        <label>Matrix Values:</label><br>
+        <input type="number" name="matrixValues" value="0" required>
+        <input type="number" name="matrixValues" value="0" required>
+        <input type="number" name="matrixValues" value="0" required>
+        <input type="number" name="matrixValues" value="0" required>
+        <input type="number" name="matrixValues" value="0" required>
+      </div>
+
+      <div class="form-group">
+        <input type="number" name="matrixValues" value="0" required>
+        <input type="number" name="matrixValues" value="0" required>
+        <input type="number" name="matrixValues" value="-1" required>
+        <input type="number" name="matrixValues" value="0" required>
+        <input type="number" name="matrixValues" value="0" required>
+      </div>
+
+      <div class="form-group">
+        <input type="number" name="matrixValues" value="0" required>
+        <input type="number" name="matrixValues" value="-1" required>
+        <input type="number" name="matrixValues" value="8" required>
+        <input type="number" name="matrixValues" value="-1" required>
+        <input type="number" name="matrixValues" value="0" required>
+      </div>
+
+      <div class="form-group">
+        <input type="number" name="matrixValues" value="0" required>
+        <input type="number" name="matrixValues" value="0" required>
+        <input type="number" name="matrixValues" value="-1" required>
+        <input type="number" name="matrixValues" value="0" required>
+        <input type="number" name="matrixValues" value="0" required>
+      </div>
+
+      <div class="form-group">
+        <input type="number" name="matrixValues" value="0" required>
+        <input type="number" name="matrixValues" value="0" required>
+        <input type="number" name="matrixValues" value="0" required>
+        <input type="number" name="matrixValues" value="0" required>
+        <input type="number" name="matrixValues" value="0" required>
+      </div>
+
+      <div class="form-group">
+        <br>
+        <label for="scaleValue">Scale:</label>
+        <input type="number" id="scaleValue" name="scaleValue" value="1" required>
+         <label></label>
+        <label for="offsetValue">Offset:</label>
+        <input type="number" id="offsetValue" name="offsetValue" value="0" required>
+      </div> 
+      
+    </form>
+    
+     <h3><button onclick="applyCustomFilter();">Apply Custom Filter</button></h3>  
+  </div>
+ 
+  </div>
+   <script src="playground/pg_getBuffer.jsx"></script>	
+   <script src="playground/pg_customFilter.jsx"></script>	
+   <script src="playground/pg_sendBuffer.jsx"></script>	
+  
+<h3 class="home_page"><a href="index.html">Home page</a></h3> 
+  
+ <h4 class="footer">(c) Pustovoit Oleg, 2023</h4>
+  
+</body>
+
+</html>

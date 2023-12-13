@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="img/icon.png" type="image/png" />
+  <meta name="viewport" content="width=device-width">
+  <title>Photopea Actions Lib - Layer Styles examples</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+   <h1><a id="alogo" href="index.html"><img id="logo" src="img/icon512.png"></a><br>Layer Styles examples</h1>
+
+  <div class="codeClass" id="LSBE">
+    <h3>Bevel and Emboss</h3>
+    <textarea>
+//applyStyle("BevelAndEmboss", ["PlEb", "SfBL", "In  " , 95.0, 5.0, 15.0, 45.0, 15.0, false, "Cone", "Scrn", [255.0, 0.0, 0.0], 80.0, "Mltp", [0.0, 0.0, 0.0], 70.0, true]);
+      
+//1-st parameter: "OtrB", "InrB", "Embs", "PlEb", "strokeEmboss" - style (stroke emboss no worked without bevel contour add!);
+//2-nd parameter: "SfBL", "PrBL", "Slmt" - technique; 
+//3-rd parameter: "In  ", "Out ": Up/Down; 
+//4-th parameter: depth in percents;
+//5-th parameter: size in pixels;
+//6-th parameter: soften in pixels;
+//7-th parameter: lighting angle in degrees;
+//8-th parameter: altitude angle in degrees; 
+//9-th parameter: true/false - use global angle;
+//10-th parameter: contour name;
+//11-th parameter: "Nrml", "Dslv", "Drkn", "Mltp", "CBrn", "linearBurn", "darkerColor", "Lghn", "Scrn", "CDdg", "linearDodge", "lighterColor", "Ovrl", "SftL", "HrdL", "vividLight", "linearLight", "pinLight", "hardMix", "Dfrn", "Xclu", "blendSubtraction", "blendDivide", "H", "Strt", "Clr", "Lmns" - blend mode highlights;
+//12-th parameter: color highlights in RGB; 
+//13-th parameter: opacity highlights in percents;
+//14-th parameter: "Nrml", "Dslv", "Drkn", "Mltp", "CBrn", "linearBurn", "darkerColor", "Lghn", "Scrn", "CDdg", "linearDodge", "lighterColor", "Ovrl", "SftL", "HrdL", "vividLight", "linearLight", "pinLight", "hardMix", "Dfrn", "Xclu", "blendSubtraction", "blendDivide", "H", "Strt", "Clr", "Lmns" - blend mode shadows;
+//15-th parameter: color shadows in RGB;
+//16-th parameter: opacity shadows in percents;
+//17-th parameter: true/false - anti-alias gloss;
+
+//applyStyle("BevelAndEmbossCon", ["PlEb", "SfBL", "In  " , 95.0, 5.0, 15.0, 45.0, 15.0, false, "Cone", "Scrn", [255.0, 0.0, 0.0], 80.0, "Mltp", [0.0, 0.0, 0.0], 70.0, true, "Gaussian", true, 40.0]);
+
+//1-st parameter: "OtrB", "InrB", "Embs", "PlEb", "strokeEmboss" - style (stroke emboss no worked without bevel contour add!);
+//2-nd parameter: "SfBL", "PrBL", "Slmt" - technique; 3-rd parameter: "In  ", "Out ": Up/Down; 
+//4-th parameter: depth in percents; 5-th parameter: size in pixels; 6-th parameter: soften in pixels;
+//7-th parameter: lighting angle in degrees; 8-th parameter: altitude angle in degrees; 9-th parameter: true/false - use global angle;
+//10-th parameter: contour name;
+//11-st parameter: "Nrml", "Dslv", "Drkn", "Mltp", "CBrn", "linearBurn", "darkerColor", "Lghn", "Scrn", "CDdg", "linearDodge", "lighterColor", "Ovrl", "SftL", "HrdL", "vividLight", "linearLight", "pinLight", "hardMix", "Dfrn", "Xclu", "blendSubtraction", "blendDivide", "H", "Strt", "Clr", "Lmns" - blend mode highlights;
+//12-nd parameter: color highlights in RGB; 13-rd parameter: opacity highlights in percents;
+//14-st parameter: "Nrml", "Dslv", "Drkn", "Mltp", "CBrn", "linearBurn", "darkerColor", "Lghn", "Scrn", "CDdg", "linearDodge", "lighterColor", "Ovrl", "SftL", "HrdL", "vividLight", "linearLight", "pinLight", "hardMix", "Dfrn", "Xclu", "blendSubtraction", "blendDivide", "H", "Strt", "Clr", "Lmns" - blend mode shadows;
+//15-nd parameter: color shadows in RGB; 16-rd parameter: opacity shadows in percents;
+//17-th parameter: true/false - anti-alias gloss;
+//18-th parameter: contour name;
+//19-th parameter: true/false - anti-alias;
+//20-th parameter: range in percentes;
+
+//applyStyle("BevelAndEmbossTex", ["Embs", "SfBL", "Out " , 400.0, 30.0, 15.0, 45.0, 15.0, false, "Cone", "Scrn", [255.0, 0.0, 0.0], 80.0, "Mltp", [0.0, 0.0, 0.0], 70.0, true, "Default/smalldots", 15.0,  100.0,  true, false,  [10.0, 10.0] ]);
+      
+//1-st parameter: "OtrB", "InrB", "Embs", "PlEb", "strokeEmboss" - style (stroke emboss no worked without bevel contour add!);
+//2-nd parameter: "SfBL", "PrBL", "Slmt" - technique;
+//3-rd parameter: "In  ", "Out ": Up/Down; 
+//4-th parameter: depth in percents;
+//5-th parameter: size in pixels;
+//6-th parameter: soften in pixels;
+//7-th parameter: lighting angle in degrees;
+//8-th parameter: altitude angle in degrees;
+//9-th parameter: true/false - use global angle;
+//10-th parameter: contour name;
+//11-st parameter: "Nrml", "Dslv", "Drkn", "Mltp", "CBrn", "linearBurn", "darkerColor", "Lghn", "Scrn", "CDdg", "linearDodge", "lighterColor", "Ovrl", "SftL", "HrdL", "vividLight", "linearLight", "pinLight", "hardMix", "Dfrn", "Xclu", "blendSubtraction", "blendDivide", "H", "Strt", "Clr", "Lmns" - blend mode highlights;
+//12-nd parameter: color highlights in RGB;
+//13-rd parameter: opacity highlights in percents;
+//14-st parameter: "Nrml", "Dslv", "Drkn", "Mltp", "CBrn", "linearBurn", "darkerColor", "Lghn", "Scrn", "CDdg", "linearDodge", "lighterColor", "Ovrl", "SftL", "HrdL", "vividLight", "linearLight", "pinLight", "hardMix", "Dfrn", "Xclu", "blendSubtraction", "blendDivide", "H", "Strt", "Clr", "Lmns" - blend mode shadows;
+//15-nd parameter: color shadows in RGB;
+//16-rd parameter: opacity shadows in percents;
+//17-th parameter: true/false - anti-alias gloss;
+//18-th parameter: pattern name;
+//19-th parameter: scale in percents;
+//20-th parameter: depth in percents;
+//21-th parameter: true/false - invert;
+//22-th parameter: true/false - align with layer;
+//23-th parameter: [OffX, OffY] - offset
+
+//applyStyle("BevelAndEmbossConTex", ["PlEb", "SfBL", "In  " , 95.0, 5.0, 15.0, 45.0, 15.0, false, "Cone", "Scrn", [255.0, 0.0, 0.0], 80.0, "Mltp", [0.0, 0.0, 0.0], 70.0, true, "Gaussian", true, 40.0, "Default/smalldots", 215.0,  100.0,  true, false,  [10.0, 10.0] ]);
+      
+//1-st parameter: "OtrB", "InrB", "Embs", "PlEb", "strokeEmboss" - style (stroke emboss no worked without bevel contour add!);
+//2-nd parameter: "SfBL", "PrBL", "Slmt" - technique; 3-rd parameter: "In  ", "Out ": Up/Down; 
+//4-th parameter: depth in percents; 5-th parameter: size in pixels; 6-th parameter: soften in pixels;
+//7-th parameter: lighting angle in degrees; 8-th parameter: altitude angle in degrees; 9-th parameter: true/false - use global angle;
+//10-th parameter: contour name;
+//11-st parameter: "Nrml", "Dslv", "Drkn", "Mltp", "CBrn", "linearBurn", "darkerColor", "Lghn", "Scrn", "CDdg", "linearDodge", "lighterColor", "Ovrl", "SftL", "HrdL", "vividLight", "linearLight", "pinLight", "hardMix", "Dfrn", "Xclu", "blendSubtraction", "blendDivide", "H", "Strt", "Clr", "Lmns" - blend mode highlights;
+//12-nd parameter: color highlights in RGB; 13-rd parameter: opacity highlights in percents;
+//14-st parameter: "Nrml", "Dslv", "Drkn", "Mltp", "CBrn", "linearBurn", "darkerColor", "Lghn", "Scrn", "CDdg", "linearDodge", "lighterColor", "Ovrl", "SftL", "HrdL", "vividLight", "linearLight", "pinLight", "hardMix", "Dfrn", "Xclu", "blendSubtraction", "blendDivide", "H", "Strt", "Clr", "Lmns" - blend mode shadows;
+//15-nd parameter: color shadows in RGB; 16-rd parameter: opacity shadows in percents;
+//17-th parameter: true/false - anti-alias gloss;
+//18-th parameter: contour name; 
+//19-th parameter: true/false - anti-alias; 
+//20-th parameter: range in percentes;
+//21-th parameter: pattern name;
+//22-th parameter: scale in percents;
+//23-th parameter: depth in percents;
+//24-th parameter: true/false - invert;
+//25-th parameter: true/false - align with layer;
+//26-th parameter: [OffX, OffY] - offset
+    </textarea>
+  </div> 
+
+  <div class="codeClass" id="LSS">
+    <h3>Stroke</h3>
+    <textarea>
+//applyStyle("StrokeColor", ["OutF", "Mltp", 80.0, 3, true, [128.0, 192.0, 0.0] ]);
+      
+//1-st parameter: "OutF", "CtrF", "InsF" - position; 
+//2-nd parameter: "Nrml", "Dslv", "Drkn", "Mltp", "CBrn", "linearBurn", "darkerColor", "Lghn", "Scrn", "CDdg", "linearDodge", "lighterColor", "Ovrl", "SftL", "HrdL", "vividLight", "linearLight", "pinLight", "hardMix", "Dfrn", "Xclu", "blendSubtraction", "blendDivide", "H", "Strt", "Clr", "Lmns" - blend mode;
+//3-rd parameter: opacity in percents;
+//4-th parameter: width stroke in pixels;
+//5-th parameter: true/false - overprint;
+//6-th parameter: color RGB;
+
+//applyStyle("StrokePattern", ["OutF",  "Scrn", 70.0, 20, true, "Default/orangeslices", 60.0, 120.0, false,  [10.0, 10.0] ]);
+
+//1-st parameter: "OutF", "CtrF", "InsF" - position; 
+//2-nd parameter: "Nrml", "Dslv", "Drkn", "Mltp", "CBrn", "linearBurn", "darkerColor", "Lghn", "Scrn", "CDdg", "linearDodge", "lighterColor", "Ovrl", "SftL", "HrdL", "vividLight", "linearLight", "pinLight", "hardMix", "Dfrn", "Xclu", "blendSubtraction", "blendDivide", "H", "Strt", "Clr", "Lmns" - blend mode;
+//3-rd parameter: opacity in percents;
+//4-th parameter: width stroke in pixels;
+//5-th parameter: true/false - overprint;
+//6-td parameter: pattern name;
+//7-th parameter: angle in degrees;
+//8-th parameter: scale in percents;
+//9-th parameter: true/false - align with layer;
+//10-th parameter: [OffX, OffY] - offset
+    </textarea>
+  </div>
+
+  <div class="codeClass" id="LSIS">
+    <h3>Inner Shadow</h3>
+    <textarea>
+//applyStyle("InnerShadow", ["Mltp", [0.0, 0.0, 0.0], 80.0, false, 45.0,  20.0, 10.0, 40.0, "Cone - Inverted", 15.0, true]);
+
+//1-st parameter: "Nrml", "Dslv", "Drkn", "Mltp", "CBrn", "linearBurn", "darkerColor", "Lghn", "Scrn", "CDdg", "linearDodge", "lighterColor", "Ovrl", "SftL", "HrdL", "vividLight", "linearLight", "pinLight", "hardMix", "Dfrn", "Xclu", "blendSubtraction", "blendDivide", "H", "Strt", "Clr", "Lmns" - blend mode;
+//2-nd parameter: color RGB; 
+//3-rd parameter: opacity in percents; 
+//4-th parameter: true/false - use global angle;
+//5-th parameter: angle in degrees;
+//6-th parameter: distance in pixels;
+//7-th parameter: spread in percents;
+//8-th parameter: size in pixels; 
+//9-th parameter: contour name;
+//10-th parameter: noise in percents;
+//11-th parameter: true/false - anti-alias;
+    </textarea>
+  </div>
+
+   <div class="codeClass" id="LSIG">
+    <h3>Inner Glow</h3>
+    <textarea>
+//applyStyle("InnerGlow", ["Scrn", [255.0, 0.0, 0.0], 90.0, 50.0, "SfBL", "SrcC", 20.0, 40.0, "Cove - Deep", 50.0, 35.0, true]);
+      
+//1-st parameter: "Nrml", "Dslv", "Drkn", "Mltp", "CBrn", "linearBurn", "darkerColor", "Lghn", "Scrn", "CDdg", "linearDodge", "lighterColor", "Ovrl", "SftL", "HrdL", "vividLight", "linearLight", "pinLight", "hardMix", "Dfrn", "Xclu", "blendSubtraction", "blendDivide", "H", "Strt", "Clr", "Lmns" - blend mode;
+//2-nd parameter: color RGB; 
+//3-rd parameter: opacity in percents;
+//4-th parameter: noise in percents; 
+//5-th parameter: "SfBL", "PrBL" - technique;
+//6-th parameter: "SrcC", "SrcE" - source;
+//7-th parameter: spread in percents;
+//8-th parameter: size in pixels; 
+//9-th parameter: contour name;
+//10-th parameter: range in percents;
+//11-th parameter: jitter in percents;
+//12-th parameter: true/false - anti-alias;
+    </textarea>
+  </div>
+
+  <div class="codeClass" id="LSSt">
+    <h3>Satin</h3>
+    <textarea>
+//applyStyle("Satin", ["Ovrl", [0.0, 255.0, 0.0], 80.0,  135.0, 15.0,  30.0, "Half Round", true, true]);
+
+//1-st parameter: "Nrml", "Dslv", "Drkn", "Mltp", "CBrn", "linearBurn", "darkerColor", "Lghn", "Scrn", "CDdg", "linearDodge", "lighterColor", "Ovrl", "SftL", "HrdL", "vividLight", "linearLight", "pinLight", "hardMix", "Dfrn", "Xclu", "blendSubtraction", "blendDivide", "H", "Strt", "Clr", "Lmns" - blend mode;
+//2-nd parameter: color RGB;
+//3-rd parameter: opacity in percents; 
+//4-th parameter: angle in degrees;
+//5-th parameter: distance in pixels;
+//6-th parameter: size in pixels;
+//7-th parameter: contour name;
+//8-th parameter: true/false - invert;
+//9-th parameter: true/false - anti-alias;
+    </textarea>
+  </div>
+  
+  <div class="codeClass" id="LSCO">
+    <h3>Color Overlay</h3>
+    <textarea>
+//applyStyle("ColorOverlay", ["Ovrl", [0.0, 0.0, 255.0], 80.0]);
+      
+//1-st parameter: "Nrml", "Dslv", "Drkn", "Mltp", "CBrn", "linearBurn", "darkerColor", "Lghn", "Scrn", "CDdg", "linearDodge", "lighterColor", "Ovrl", "SftL", "HrdL", "vividLight", "linearLight", "pinLight", "hardMix", "Dfrn", "Xclu", "blendSubtraction", "blendDivide", "H", "Strt", "Clr", "Lmns" - blend mode
+//2-nd parameter: color RGB;
+//3-rd parameter: opacity in percents;      
+    </textarea>
+  </div>
+
+  <div class="codeClass" id="LSPO">
+    <h3>Pattern Overlay</h3>
+    <textarea>
+//applyStyle("PatternOverlay",  ["Dfrn", 90.0, "Default/smalldots", 45.0, 110.0,  false,  [10.0, 10.0] ]);
+      
+//1-st parameter: "Nrml", "Dslv", "Drkn", "Mltp", "CBrn", "linearBurn", "darkerColor", "Lghn", "Scrn", "CDdg", "linearDodge", "lighterColor", "Ovrl", "SftL", "HrdL", "vividLight", "linearLight", "pinLight", "hardMix", "Dfrn", "Xclu", "blendSubtraction", "blendDivide", "H", "Strt", "Clr", "Lmns" - blend mode;
+//2-nd parameter: opacity in percents, 
+//3-rd parameter: pattern name; 
+//4-th parameter: angle in degrees;
+//5-th parameter: scale in percents; 
+//6-th parameter: true/false - align with layer;
+//7-th parameter: [OffX, OffY] - offset     
+    </textarea>
+  </div>
+
+  <div class="codeClass" id="LSOG">
+    <h3>Outer Glow</h3>
+    <textarea>
+//applyStyle("OuterGlow", ["SftL", [255.0, 0.0, 0.0], 90.0, 50.0, "PrBL", 20.0, 40.0, "Cone - Asymmetrical", 50.0, 35.0, true]);
+      
+//1-st parameter: "Nrml", "Dslv", "Drkn", "Mltp", "CBrn", "linearBurn", "darkerColor", "Lghn", "Scrn", "CDdg", "linearDodge", "lighterColor", "Ovrl", "SftL", "HrdL", "vividLight", "linearLight", "pinLight", "hardMix", "Dfrn", "Xclu", "blendSubtraction", "blendDivide", "H", "Strt", "Clr", "Lmns" - blend mode;
+//2-nd parameter: color RGB; 
+//3-rd parameter: opacity in percents;
+//4-th parameter: noise in percents;
+//5-th parameter: "SfBL", "PrBL" - technique;
+//6-th parameter: spread in percents;
+//7-th parameter: size in pixels; 
+//8-th parameter: contour name;
+//9-th parameter: range in percents;
+//10-th parameter: jitter in percents;
+//11-th parameter: true/false - anti-alias;  
+    </textarea>
+  </div>
+
+  <div class="codeClass" id="LSDS">
+    <h3>Drop Shadow</h3>
+    <textarea>
+//applyStyle ("DropShadow", ["Mltp", [0.0, 0.0, 0.0], 80.0, false, 45.0,  20.0, 10.0, 40.0, "Gaussian", 15.0, true, true, false]);
+      
+//1-st parameter: "Nrml", "Dslv", "Drkn", "Mltp", "CBrn", "linearBurn", "darkerColor", "Lghn", "Scrn", "CDdg", "linearDodge", "lighterColor", "Ovrl", "SftL", "HrdL", "vividLight", "linearLight", "pinLight", "hardMix", "Dfrn", "Xclu", "blendSubtraction", "blendDivide", "H", "Strt", "Clr", "Lmns" - blend mode;
+//2-nd parameter: color RGB;
+//3-rd parameter: opacity in percents; 
+//4-th parameter: true/false - use global angle;
+//5-th parameter: angle in degrees;
+//6-th parameter: distance in pixels;
+//7-th parameter: spread in percents;
+//8-th parameter: size in pixels; 
+//9-th parameter: contour name;
+//10-th parameter: noise in percents;
+//11-th parameter: true/false - anti-alias;
+//12-th parameter: true/false - knockout drop shadow;
+//13-th parameter: true/false - continuos
+    </textarea>
+  </div>
+
+  <div class="codeClass" id="LS3D">
+    <h3>3D</h3>
+    <textarea>
+//applyStyle("3D", ["Mltp", [0.0, 0.0, 172.0], 75.0,  false, 135.0, 20.0, 10.0, 30.0, 60.0, 15.0]);
+      
+//1-st parameter: "Nrml", "Dslv", "Drkn", "Mltp", "CBrn", "linearBurn", "darkerColor", "Lghn", "Scrn", "CDdg", "linearDodge", "lighterColor", "Ovrl", "SftL", "HrdL", "vividLight", "linearLight", "pinLight", "hardMix", "Dfrn", "Xclu", "blendSubtraction", "blendDivide", "H", "Strt", "Clr", "Lmns" - blend mode;
+//2-nd parameter: color RGB;
+//3-rd parameter: opacity in percents;
+//4-th parameter: true/false - use global angle;
+//5-th parameter: angle in degrees;
+//6-th parameter: distance in pixels;
+//7-th parameter: shrink in percents;
+//8-th parameter: lighting angle in degrees;
+//9-th parameter: altitude angle in degrees;
+//10-th parameter: darken in percents;
+    </textarea>
+  </div>
+  
+  <div class="codeClass" id="LSCP">
+    <h3>Contours and Patterns names (from default sets)</h3>
+    <textarea>
+//CONTOURS NAMES:
+//"Linear"
+//"Cone"
+//"Cone - Asymmetrical"
+//"Cone - Inverted"
+//"Cove - Deep"
+//"Cove - Shallow"
+//"Gaussian"
+//"Guassian - Inverse" 
+//"Half Round"
+//"Log"
+//"Notched Slope"
+//"Notched Slope - Rounded"
+//"Peaks"
+//"Ring"
+//"Ring - Double"
+//"Ring - Triple"
+//"Rolling Slope - Ascending"
+//"Rolling Slope - Descending"
+//"Rounded Slope"
+//"Rounded Steps"
+//"Sawtooth 1"
+//"Sawtooth 2"
+//"Shallow Slope - Valley"
+//"Shallow Slope - Valleys"
+//"Steep Slope - Jagged"
+//"Steep Slope - Rolling"
+//"Steps"
+//"Terraced"
+//"Valley - High"
+//"Valley - Low"
+
+//PATTERNS NAMES:
+//"Default/orangeslices"
+//"Default/pat02"
+//"Default/pat03"
+//"Default/pat04"
+//"Default/pat06" 
+//"Default/smalldots"
+//"Default/multihorizontalstripe"
+//"Default/metal-grid-5"
+//"Default/pat05"
+    </textarea>
+  </div>
+
+
+ <h3 class="home_page"><a href="index.html">Home page</a></h3> 
+
+ <h4 class="footer">(c) Pustovoit Oleg, 2023</h4>
+  
+</body>
+
+</html>

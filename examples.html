@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="img/icon.png" type="image/png" />
+  <meta name="viewport" content="width=device-width">
+  <title>Photopea Actions Lib - Classic PS Functions examples</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+   <h1><a id="alogo" href="index.html"><img id="logo" src="img/icon512.png"></a><br>Classic PS Functions examples</h1>
+  
+  <div class="codeClass" id="CLF">
+    <h3>Classic PS Layer functions</h3>
+    <textarea>
+//app.activeDocument.activeLayer.name="Zoo";
+//app.activeDocument.activeLayer.visible=false;
+//app.activeDocument.activeLayer.opacity=95;
+//app.activeDocument.activeLayer.fillOpacity=50;
+//app.activeDocument.activeLayer.blendMode=BlendMode.SCREEN; //NORMAL, DISSOLVE, DARKEN, MULTIPLY, COLORBURN, LINEARBURN, DARKERCOLOR, LIGHTEN,  SCREEN, COLORDODGE, LINEARDODGE, LIGHTERCOLOR, OVERLAY, SOFTLIGHT, HARDLIGHT, VIVIDLIGHT, LINEARLIGHT, PINLIGHT, HARDMIX, DIFFERENCE, EXCLUSION, SUBTRACT, DIVIDE, HUE, SATURATION, COLOR, LUMINOSITY
+
+//app.activeDocument.activeLayer.rotate(90);
+//app.activeDocument.activeLayer.translate(20,20);
+//app.activeDocument.activeLayer.desaturate();
+//app.activeDocument.activeLayer.invert();
+//app.activeDocument.activeLayer.rasterize();
+//app.activeDocument.activeLayer.adjustBrightnessContrast(20, 20);
+
+//app.activeDocument.activeLayer.clear();
+//app.activeDocument.activeLayer.copy();
+//app.activeDocument.activeLayer.copy(true); //merge copy performed
+//app.activeDocument.activeLayer.merge();
+//app.activeDocument.activeLayer.duplicate();
+      
+//app.activeDocument.activeLayer.applyStyle("Pyramid"); //If style with this name adding in Photopea Layer Style Set 
+    </textarea>
+  </div>
+  
+  <div class="codeClass" id="CFF">
+    <h3>Classic PS Filters functions</h3>
+    <textarea>
+//app.activeDocument.activeLayer.applyAddNoise(20, "GAUSSIAN", true); //"GAUSSIAN", "UNIFORM"
+//app.activeDocument.activeLayer.applyAverage();
+//app.activeDocument.activeLayer.applyBlur();
+//app.activeDocument.activeLayer.applyBlurMore();
+//app.activeDocument.activeLayer.applyClouds();
+//app.activeDocument.activeLayer.applyDifferenceClouds();
+//app.activeDocument.activeLayer.applyDustAndScratches(50, 100);
+//app.activeDocument.activeLayer.applyGaussianBlur(5);
+//app.activeDocument.activeLayer.applyHighPass(5);
+//app.activeDocument.activeLayer.applyMaximum(1);
+//app.activeDocument.activeLayer.applyMinimum(1);
+//app.activeDocument.activeLayer.applyMotionBlur(45,50);
+//app.activeDocument.activeLayer.applyPinch(10);
+//app.activeDocument.activeLayer.applySharpen();
+//app.activeDocument.activeLayer.applySharpenMore();
+//app.activeDocument.activeLayer.applyPolarCoordinates("POLARTORECTANGULAR"); //POLARTORECTANGULAR, RECTANGULARTOPOLAR
+//app.activeDocument.activeLayer.applyRipple(500, "LARGE"); //"LARGE", "MEDIUM", "SMALL"
+//app.activeDocument.activeLayer.applyTwirl(20);
+    </textarea>
+  </div>
+
+<div class="codeClass" id="CSF">
+    <h3>Classic PS selection functions</h3>
+    <textarea>
+//app.activeDocument.selection.fill(app.foregroundColor);
+//app.activeDocument.selection.fill(app.backgroundColor);
+
+//app.activeDocument.selection.copy();
+//app.activeDocument.selection.selectAll();
+//app.activeDocument.selection.deselect();
+//app.activeDocument.selection.clear();
+//app.activeDocument.selection.invert();
+
+//app.activeDocument.selection.contract(10);
+//app.activeDocument.selection.expand(20);
+//app.activeDocument.selection.feather(20);
+//app.activeDocument.selection.smooth(10);
+
+//app.activeDocument.selection.grow(10);
+//app.activeDocument.selection.similar(10);
+
+//app.activeDocument.selection.translate(20,20);
+//app.activeDocument.selection.translateBoundary(20,20);//???
+
+app.activeDocument.paste(true);//Past in selection
+     </textarea>
+</div>
+
+<div class="codeClass" id="CDF">
+    <h3>Classic PS Document functions</h3>
+    <textarea>
+//app.activeDocument.rotateCanvas(50);
+
+//app.activeDocument.resizeCanvas("100px", "200px", AnchorPosition.MIDDLECENTER); //BOTTOMCENTER, BOTTOMLEFT, BOTTOMRIGHT, MIDDLECENTER, MIDDLELEFT, MIDDLERIGHT, TOPCENTER, TOPLEFT, TOPRIGHT
+//app.activeDocument.resizeCanvas("110%", "120%", AnchorPosition.MIDDLECENTER); //BOTTOMCENTER, BOTTOMLEFT, BOTTOMRIGHT, MIDDLECENTER, MIDDLELEFT, MIDDLERIGHT, TOPCENTER, TOPLEFT, TOPRIGHT
+
+//app.activeDocument.resizeImage("256px", "128px", 96);
+//app.activeDocument.resizeImage("50%",   "120%",  96);
+//app.activeDocument.resizeImage("50%", "50%", 72, "BILINEAR");//"NEARESTNEIGHBOR", "BILINEAR", "BICUBICSHARPER"
+//app.activeDocument.resizeImage("200px", "100px", 72, "BILINEAR");//"NEARESTNEIGHBOR", "BILINEAR", "BICUBICSHARPER"
+
+//app.activeDocument.flatten();
+
+app.activeDocument.paste();
+app.activeDocument.paste(true); //Past in selection
+
+app.activeDocument.close();
+app.activeDocument.save();
+    </textarea>
+  </div>
+  
+<div class="codeClass" id="CAF">
+    <h3>Classic PS Application functions</h3>
+    <textarea>
+//app.open("https://www.photopea.com/api/img2/pug.png");   //O P E N  F R O M   U R L
+      
+//app.documents.add(600, 800, 72, "New File Name", "RGB"); //C R E A T E   N E W   F I L E      
+    </textarea>
+  </div>
+
+<h3 class="home_page"><a href="index.html">Home page</a></h3> 
+
+ <h4 class="footer">(c) Pustovoit Oleg, 2023</h4>
+</body>
+
+</html>
